@@ -40,16 +40,35 @@ hr {
 	background-color: #e5e5e5;
 }
 
+.container {
+  max-width: 1920px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.background {
+  background: url('images/main__screen-background.jpg');
+  position: absolute;
+  z-index: -1;
+  width: 1900px;
+  height: 780px;
+  opacity: 5%;
+}
+
 .menu {
   max-width: 1160px;
   margin-top: 30px;
   display: flex;
+  /* flex-direction: column; */
   justify-content: space-between;
 }
 
 .menu__logo {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   
 }
@@ -91,7 +110,56 @@ hr {
 
   .main__screen {
     display: flex;
-    height: 736px;
-    background: url('./images/main__screen-background.jpg');
+    height: 856px;
+    overflow: hidden;
+    
+    /* opacity: 5%; */
+  }
+
+  .men{
+    position: relative;
+  }
+
+
+  .big_circule {
+    position: absolute;
+    width: 1131px;
+    z-index: 1;
+    height: 1131px;
+    background: #000;
+    opacity: 3%;
+    border-radius: 100%;
+    margin-left: 74px;
+    margin-top: 90px;
+  }
+  .midle_circule {
+    position: absolute;
+    width: 862px;
+    z-index: 2;
+    height: 862px;
+    background: #000;
     opacity: 5%;
+    border-radius: 100%;
+    margin-left: 208px;
+    margin-top: 227px;
+  }
+  .small_circule {
+      position: absolute;
+      width: 566px;
+      z-index: 3;
+      height: 566px;
+      background: #000;
+      opacity: 7%;
+      border-radius: 100%;
+      margin-left: 356px;
+    margin-top: 375px;
+  }
+
+  .main__man {
+    position: absolute;
+    z-index: 4;
+    top:120px;
+    left: 382px;
+    height: 736px;
+    width: 493px;
   }
