@@ -8,6 +8,26 @@
   src: url('../--1/static/Manrope-Bold.ttf');
 }
 
+@font-face {
+  font-family: "Manrope", sans-serif;
+  src: url('./static/Manrope-Light.ttf');
+}
+
+@font-face {
+  font-family: "Manrope", sans-serif;
+  src: url('./static/Manrope-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: "Manrope", sans-serif;
+  src: url('./static/Manrope-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: "Manrope", sans-serif;
+  src: url('./static/Manrope-Medium.ttf');
+}
+
 body {
 	margin: 0;
 	font-family: "Manrope", sans-serif;
@@ -27,8 +47,14 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
 	margin: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
 }
 
 hr {
@@ -36,7 +62,7 @@ hr {
 	width: 100%;
 	height: 1px;
 	border: 0;
-	margin: 50px 0px;
+	margin: 0px;
 	background-color: #e5e5e5;
 }
 
@@ -48,29 +74,41 @@ hr {
   margin: 0 auto;
 }
 
+.container2 {
+  max-width: 1500px;
+  height: auto;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
 .background {
   background: url('images/main__screen-background.jpg');
   position: absolute;
   z-index: -1;
   width: 1900px;
-  height: 780px;
+  height: 843px;
   opacity: 5%;
 }
 
+/* Меню */
+
 .menu {
-  max-width: 1160px;
-  margin-top: 30px;
   display: flex;
-  /* flex-direction: column; */
-  justify-content: space-between;
 }
+
+.menu__content {
+  display: flex;
+  margin: 30px auto 0px;
+  align-items: center;
+}
+
+
 
 .menu__logo {
   display: flex;
   align-items: center;
-  flex-direction: column;
   justify-content: center;
-  
+  margin-right: 150px;
 }
 
   .menu__logo-line {
@@ -94,6 +132,7 @@ hr {
     max-width: 193px;
     display: flex;
     align-items: center;
+    margin-right: 150px;
   }
 
   .menu__adress-img {
@@ -103,20 +142,75 @@ hr {
   }
 
   .menu__adress-text {
+    color: #3f3f3f;
     max-width: 115px;
     font-size: 14px;
     margin-left: 16px;
   }
 
-  .main__screen {
+  .menu__number {
     display: flex;
-    height: 856px;
-    overflow: hidden;
-    
-    /* opacity: 5%; */
+    align-items: center;
+    max-width: 235px;
+    border-radius: 673px;
+    height: 56px;
+    box-shadow: 0 14px 54px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
   }
 
-  .men{
+  .menu__number-icon {
+    margin-left: 13px;
+  }
+
+  .menu__number-phone {
+    margin-right: 25px;
+  }
+
+  .menu_number-icon-img {
+    width: 31px;
+    height: 31px;
+    
+  }
+
+  .menu__number span {
+    font-size: 20px;
+    color: #818181;
+    font-weight: 300;
+    margin-left: 8px;
+
+  }
+
+  .menu__number b {
+    color: #E21F4D;
+    font-weight: 700;
+  }
+
+  .menu__number-text {
+    display: flex;
+    color: #767676;
+    justify-content: right;
+    align-items: center;
+
+  }
+
+  .menu__number-text p {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  .menu__number-text img {
+    width: 4px;
+    height: 4px;
+  }
+
+  /* Главный экран */
+
+  .main__screen {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .main__screen-man {
     position: relative;
   }
 
@@ -129,8 +223,8 @@ hr {
     background: #000;
     opacity: 3%;
     border-radius: 100%;
-    margin-left: 74px;
-    margin-top: 90px;
+    top: 1%;
+    left: 18%;
   }
   .midle_circule {
     position: absolute;
@@ -140,8 +234,8 @@ hr {
     background: #000;
     opacity: 5%;
     border-radius: 100%;
-    margin-left: 208px;
-    margin-top: 227px;
+    top: 20%;
+    left: 45%;
   }
   .small_circule {
       position: absolute;
@@ -151,15 +245,577 @@ hr {
       background: #000;
       opacity: 7%;
       border-radius: 100%;
-      margin-left: 356px;
-    margin-top: 375px;
+      top: 35%;
+      left: 75%;
   }
 
   .main__man {
-    position: absolute;
+    position: relative;
     z-index: 4;
-    top:120px;
-    left: 382px;
+    top: 1%;
+    left: 80%;
     height: 736px;
     width: 493px;
   }
+
+  .main__signature {
+    position: absolute;
+    z-index: 5;
+    width: 130px;
+    height: 84px;
+    bottom: 2%;
+    right: -92%;
+  }
+
+  .main__screen-text {
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    z-index: 1000;
+    max-width: 656px;
+  }
+
+  .main__screen-name {
+    color: #3F3F3F;
+    line-height: 127%;
+    font-size: 55px;
+    font-weight: 800;
+  }
+
+  .main__screen-name b {
+    color: #E21F4D;
+  }
+
+  .main__screen-info {
+    margin-left: 57px;
+    margin-top: 41px;
+  }
+
+  .main__screen-promotion {
+    color: #3F3F3F;
+    max-width: 425px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .main__screen-promotion b {
+    font-weight: 700;
+  }
+
+  .main__screen-promotion span {
+    color: #E21F4D;
+  }
+
+  .main__screen-button {
+    cursor: pointer;
+    background-color: #E21F4D;
+    margin-top: 31px;
+    border: none;
+    border-radius: 1000px;
+    width: 292px;
+    height: 80px;
+    box-shadow: inset 0 0 27px 4px rgba(255, 255, 255, 0.46);
+  }
+
+  .main__screen-button span {
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .main__screen-a {
+    margin-top: 40px;
+  }
+
+  .main__screen-block {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #fff;
+    width: 427px;
+    height: 140px;
+    box-shadow: 0 12px 46px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .main__screen-img-tooth {
+    width: 55px;
+    height: 55px;
+  }
+
+   .main__screen-block-text {
+    margin-left: 26px;
+   }
+
+  .block-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3F3F3F;
+  }
+
+  .main__screen-block-text p {
+    width: 283px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .main__screen-block-text p:last-child {
+    width: 116px;
+    border-bottom: 1px solid #3F3F3F;
+    border-bottom-style: dashed;
+  }
+
+  .main__screen-arrow {
+    position: absolute;
+    bottom: -5%;
+    right: 13%;
+  }
+
+  /* Информация о клинике */
+
+  .main__clinic {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .main__clinic-man-name {
+    max-width: 206px;
+    font-size: 55px;
+    font-weight: 400;
+    color: #3f3f3f;
+  }
+
+  .name__star {
+    position: absolute;
+    z-index: 3;
+    width: 13px;
+    height: 13px;
+    top: -2%;
+    left: -5%;
+  }
+
+  .main__clinic-man-name b {
+    font-weight: 600;
+    color: #E21F4D;
+  }
+
+  .main__clinic-name {
+    margin-right: -85px;
+    position: relative;
+  }
+
+  .main__clinic-name p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #3F3F3F;
+  }
+
+  .main__clinic-man {
+    width: 512px;
+    height: 487px;
+    position: relative;
+  }
+
+  .main__clinic-info {
+    position: relative;
+  }
+  
+  .main__clinic-info-text {
+    margin-left: -100px;
+    position: relative;
+  }
+
+  .main__clinic-ourclinic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 351px;
+    width: 143px;
+    height: 44px;
+    box-shadow: 0 15px 59px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
+    margin-bottom: 20px;
+  }
+
+.main__clinic-info-text span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #E21F4D;
+}
+
+.main__clinic-price {
+  max-width: 450px;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 133%;
+  color: #3F3F3F;
+  margin-bottom: 20px;
+}
+
+.main__clinic-price b {
+  color: #E21F4D;
+}
+
+.main__clinic-priorities {
+  max-width: 458px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #3F3F3F;
+}
+
+.main__clinic-about {
+  margin-top: 15px;
+  max-width: 458px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3F3F3F;
+  line-height: 150%;
+}
+
+.main__clinic-button {
+    cursor: pointer;
+    background-color: #E21F4D;
+    margin-top: 33px;
+    border: none;
+    border-radius: 1000px;
+    width: 292px;
+    height: 80px;
+    box-shadow: inset 0 0 27px 4px rgba(255, 255, 255, 0.46);
+  }
+
+  .main__clinic-button span {
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .main__clinic-signature {
+    width: 107px;
+    height: 69px;
+    transform: rotate(-15deg);
+    position: absolute;
+    bottom: -6%;
+    right: 28%;
+  }
+
+  .star__clinic {
+    position: absolute;
+    z-index: 3;
+    width: 13px;
+    height: 13px;
+    top: 28%;
+    left: -3%;
+  }
+
+  /* Доктора */
+
+  .main__doctors {
+    border-radius: 50px;
+    width: 1500px;
+    height: 998px;
+    background: #f5f5f5;
+  }
+  
+  .main__doctors-info {
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+  }
+
+  .main__doctors-ourdoctors {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    border-radius: 351px;
+    width: 177px;
+    height: 46px;
+    box-shadow: 0 15px 59px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
+  }
+
+  .main__doctors-ourdoctors span {
+    font-weight: 500;
+    font-size: 14px;
+    color: #E21F4D;
+  }
+
+  .main__doctors-meet-text {
+    width: 327px;
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: #3F3F3F;
+  }
+
+  .main__doctors-meet-text b {
+    color: #E21F4D;
+    font-weight: 800;
+  }
+
+  .main__doctors-meet-text span {
+    font-weight: 800;
+  }
+
+  .main__doctors-text {
+    position: relative;
+    width: 428px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #3F3F3F;
+  }
+
+  .main__doctors-text b {
+    font-weight: 700;
+  }
+
+  .main__doctors-star {
+    position: absolute;
+    z-index: 3;
+    width: 13px;
+    height: 13px;
+    top: -8%;
+    left: -4%;
+  }
+
+  .main__doctors-specialists {
+    display: flex;
+    margin-top: 59px;
+    justify-content: space-evenly;
+  }
+
+  .main__doctors_doctor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 384px;
+    height: 606px;
+    background: #fff;
+  }
+
+  .main__doctors-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__doctors_doctor-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 41px;
+  }
+
+  .main__doctors_doctor-img {
+    width: 322px;
+    height: 323px;
+    align-self: center;
+  }
+
+  .doctor__name {
+    font-weight: 500;
+    font-size: 18px;
+    color: #3F3F3F;
+    margin-top: 19px;
+  }
+
+  .doctor__speciality {
+    font-weight: 400;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #E21F4D;
+  }
+
+  .doctor__info {
+    width: 264px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #3F3F3F;
+    margin-top: 15px;
+  }
+
+  .main__doctors-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e21f4d;
+    border-radius: 1000px;
+    width: 161px;
+    height: 50px;
+    margin-top: 15px;
+    background: #fff;
+  }
+
+  .main__doctors-btn img {
+    width: 20px;
+    height: 21px;
+  }
+
+  .main__doctors-btn-content span {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: #E21F4D;
+  }
+
+
+  .main__doctors-btn-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .main__doctors-btn2 {
+    margin-top: 50px;
+    align-self: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 1000px;
+    width: 195px;
+    height: 54px;
+    box-shadow: inset 0 0 27px 4px rgba(255, 255, 255, 0.25);
+    background: #e21f4d;
+  }
+
+  .main__doctors-btn2 span {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+  }
+
+  /* Наши принципы */
+
+  .main__principles {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    overflow: hidden;
+  }
+
+  .main__principles-woman {
+    position: relative;
+    width: 566px;
+    height: 655px;
+    z-index: 2;
+  }
+
+  .main__principles-ellipse {
+    position: absolute;
+    width: 862px;
+    height: 862px;
+    z-index: 1;
+    left: -2%;
+    top: -14%;
+  }
+
+  .main__principles-header {
+    position: relative;
+  }
+  
+  .main__principles-ourprinciples {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    border-radius: 351px;
+    width: 177px;
+    height: 46px;
+    box-shadow: 0 15px 59px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
+  }
+
+  .main__principles-ourprinciples span {
+    font-weight: 500;
+    font-size: 14px;
+    color: #E21F4D;
+  }
+
+  .main__principles-header-text {
+    font-size: 30px;
+    margin-top: 34px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #3F3F3F;
+    width: 575px;
+  }
+
+  .main__principles-header-text span {
+    font-weight: 700;
+    color: #e21f4d;
+  }
+
+  .main__principles-header-text b {
+    font-weight: 700;
+  }
+
+  .main__principles-points {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__principles-point {
+    display: flex;
+    margin-top: 30px;
+    border-radius: 11px;
+    width: 400px;
+    align-items: center;
+    height: 80px;
+    box-shadow: 0 15px 59px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
+  }
+
+  .principles__icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px 20px;
+  }
+
+  .point__text {
+    width: 256px;
+    font-weight: 400;
+    font-size: 11px;
+    color: #3F3F3F;
+  }
+
+  .point__text b {
+    font-weight: 700;
+  }
+
+  .main__principles-button {
+    cursor: pointer;
+    background-color: #E21F4D;
+    margin-top: 30px;
+    border: none;
+    border-radius: 1000px;
+    width: 292px;
+    height: 80px;
+    box-shadow: inset 0 0 27px 4px rgba(255, 255, 255, 0.46);
+  }
+
+  .main__principles-button span {
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .principles__star {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 20%;
+    top: 6%;
+  }
+
+
