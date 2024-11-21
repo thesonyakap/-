@@ -415,6 +415,77 @@ hr {
     color: #e21f4d;
   }
 
+  .slider-block-buttons {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .slider-button-learnmore {
+    width: 116px;
+  }
+
+  .main__slider {
+    position: relative;
+    width: 1160px;
+    overflow: hidden;
+  }
+
+  .slider-button-learnmore span {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    border-bottom: 1px solid #3F3F3F;
+    border-bottom-style: dashed;
+  }
+
+  .main__slider-button {
+    cursor: pointer;
+    background-color: #E21F4D;
+    margin-top: 33px;
+    margin-right: 17px;
+    border: none;
+    border-radius: 1000px;
+    width: 146px;
+    height: 39px;
+    box-shadow: inset 0 0 27px 4px rgba(255, 255, 255, 0.46);
+  }
+
+  .main__slider-button span {
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .main__slider-blocks {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .main__slider-block {
+    /* display: flex; */
+    /* flex-direction: column; */
+    min-width: 370px;
+    box-sizing: border-box;
+    padding: 20px;
+
+    
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
   /* Информация о клинике */
 
   .main__clinic {
@@ -542,7 +613,7 @@ hr {
     height: 69px;
     transform: rotate(-15deg);
     position: absolute;
-    bottom: -6%;
+    bottom: -58%;
     right: 28%;
   }
 
@@ -562,7 +633,7 @@ hr {
     display: flex;
     justify-content: center;
     border-radius: 50px;
-    width: 1500px;
+    max-width: 1500px;
     height: 998px;
     background: #f5f5f5;
   }
@@ -1324,6 +1395,19 @@ hr {
   width: 149px;
   margin-left: 10px;
  }
+
+ /* Медиазапросы */
+
+ @media screen (width:1440 px) {
+  
+  .main__reviews-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+ }
+
+ 
 
 
 
