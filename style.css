@@ -81,6 +81,10 @@ hr {
   margin: 0 auto;
 }
 
+.main {
+  min-width: 1450px;
+}
+
 .background {
   background: url('images/main__screen-background.jpg');
   position: absolute;
@@ -88,6 +92,23 @@ hr {
   width: 1900px;
   height: 843px;
   opacity: 5%;
+}
+
+/* Меню мобил */
+
+.menu__mobile {
+  min-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px auto;
+}
+
+.phone__mobile {
+
+}
+
+.menu__mobile-burger {
+  display: flex;
 }
 
 /* Меню */
@@ -425,8 +446,11 @@ hr {
   }
 
   .main__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: 1160px;
+    min-width: 1160px;
     overflow: hidden;
   }
 
@@ -460,35 +484,67 @@ hr {
   .main__slider-blocks {
     display: flex;
     transition: transform 0.5s ease;
+    overflow: hidden;
   }
 
   .main__slider-block {
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    margin: 0px 25px;
+    flex-direction: column;
     min-width: 370px;
     box-sizing: border-box;
-    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    min-height: 200px;
+    box-shadow: 0 14px 66px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+  }
 
-    
+  .main__slider-block-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+  }
+
+  .main__slider-block img {
+    width: 370px;
+    height: 208px;
+  }
+
+  .slider__block-title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #3f3f3f;
+    margin-bottom: 10px;
+  }
+
+  .slider__block-text {
+    width: 308px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #3f3f3f;
   }
 
   .prev, .next {
     position: absolute;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
     border: none;
     cursor: pointer;
-    padding: 10px;
+    background: none;
+  }
+
+  .prev {
+    right: 65%;
   }
 
   .next {
-    right: 10px;
+    right: 32%;
   }
 
   /* Информация о клинике */
 
   .main__clinic {
+    position: relative;
     display: flex;
     justify-content: center;
     margin-top: 100px;
@@ -613,8 +669,8 @@ hr {
     height: 69px;
     transform: rotate(-15deg);
     position: absolute;
-    bottom: -58%;
-    right: 28%;
+    bottom: 7%;
+    right: 27%;
   }
 
   .star__clinic {
