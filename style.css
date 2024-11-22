@@ -100,11 +100,11 @@ hr {
   min-width: 1200px;
   display: flex;
   justify-content: space-between;
-  margin: 20px 30px auto;
+  margin-top: 20px;
 }
 
 .phone__mobile {
-
+background-color: #3F3F3F;
 }
 
 .menu__mobile-burger {
@@ -1454,7 +1454,7 @@ hr {
 
  /* Медиазапросы */
 
- @media screen (width:1440 px) {
+ @media (width:1440px) {
   
   .main__reviews-content {
     display: flex;
